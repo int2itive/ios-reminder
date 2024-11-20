@@ -17,5 +17,124 @@ body {
 }
 
 body {
-  background-color: black;
+  background-color: #191919;
+  display: flex;
+  justify-content: center;  
 }
+
+.container {
+/*   flex: 0 1 400px; */
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  margin: 0 auto;
+}
+
+.phone {
+  position: relative;
+  background-image: url('https://ik.imagekit.io/ghow2otb3rc/Projects/SoM/cdn/tumblr-b8c5fe832c6001adf4361759c04160e6-12e4607c-1280_OD0lvolVX.jpg?updatedAt=1721910838596');
+/*   width: 400px; */
+  width: 100%;
+/*   min-width: 0; */
+/*   margin: 0 auto; */
+  padding: 10px;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.phone::after {
+  position: absolute;
+  content: '';
+/*   inset: 0; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.phone > * {
+  position: relative;
+  z-index: 1;
+}
+
+.box {
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1; 
+  backdrop-filter: blur(3px);  
+  width: 100%;
+  padding: 15px 15px;
+  transition: all .3s ease;
+}
+
+.app-title {
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: rgba(0,0,0,.66);
+  word-spacing: .1px;
+  font-size: 14px;  
+}
+
+.app-title img {
+  width: 17px;
+  margin-right: 7px;  
+}
+
+.person {
+  font-weight: 600;
+  color: #0a030b;
+  color: hsl(43.8, 0%, 98%);
+  line-height: 1.4;
+  margin-bottom: .5rem;
+}
+
+.msg {
+  font-family: 'Oswald';
+  color: rgba(0,0,0,.8);
+/*   color: hsl(60, 100%, 100%); */
+  font-weight: 600;
+}
+
+
+[class*="box-"] {
+  opacity: 0;
+  animation: 1s show-box ease-in;
+  animation-fill-mode: forwards;
+}
+
+.box-campbell {
+  animation-delay: 2s;
+  backdrop-filter: blur(0);
+}
+
+@keyframes show-box {
+  0% {
+    opacity: 0; 
+    transform: translateY(20px);
+    backdrop-filter: blur(0);  
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+    backdrop-filter: blur(3px);  
+  }
+}
+
+.box-naomi {
+  animation-delay: 5s;
+  backdrop-filter: blur(0);
+}
+
+.box-serita {
+  animation-delay: 7s;
+  backdrop-filter: blur(0);  
+}
+
+
