@@ -137,4 +137,9 @@ body {
   backdrop-filter: blur(0);  
 }
 
+box-maidfor {
+  animation-delay: 10s;
+  backdrop-filter: blur(0);  
+}
+
 
